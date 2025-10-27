@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Rayssa - Modelo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Site Rayssa</div>
+    <ul class="menu">
+      <li><a href="#">Início</a></li>
+      <li class="submenu">
+        <a href="#">Serviços</a>
+        <ul>
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Desenvolvimento</a></li>
+          <li><a href="#">Marketing</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Projetos</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <div class="hamburger" aria-label="Abrir menu">&#9776;</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Bem-vindo ao Site Rayssa</h1>
+      <p>Modelo genérico e profissional para cumprir a Entrega II.</p>
+      <button class="btn-primary">Saiba Mais</button>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <div class="card-image placeholder">Projeto 1</div>
+        <h3>Projeto 1</h3>
+        <p>Descrição breve do projeto.</p>
+        <button class="btn-secondary">Ver Mais</button>
+      </div>
+      <div class="card">
+        <div class="card-image placeholder">Projeto 2</div>
+        <h3>Projeto 2</h3>
+        <p>Outro projeto interessante.</p>
+        <button class="btn-secondary">Ver Mais</button>
+      </div>
+      <div class="card">
+        <div class="card-image placeholder">Projeto 3</div>
+        <h3>Projeto 3</h3>
+        <p>Mais um projeto do modelo.</p>
+        <button class="btn-secondary">Ver Mais</button>
+      </div>
+    </section>
+
+    <section class="formulario">
+      <h2>Entre em contato</h2>
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button class="btn-primary" type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <div class="alert success" role="status">Mensagem enviada com sucesso!</div>
+    <div class="alert error" role="alert">Erro ao enviar mensagem.</div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Site Rayssa</p>
+  </footer>
+
+  <script>
+    // Simple hamburger toggle (accessibility-friendly)
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+    hamburger && hamburger.addEventListener('click', () => {
+      menu.classList.toggle('active');
+      const expanded = menu.classList.contains('active');
+      hamburger.setAttribute('aria-expanded', expanded);
+    });
+  </script>
+</body>
+</html>
