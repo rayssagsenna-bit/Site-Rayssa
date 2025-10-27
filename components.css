@@ -1,0 +1,19 @@
+/* Buttons */
+.btn-primary, button[type="submit"] { background: var(--color-primary); color: var(--color-white); border: none; padding: var(--space-2) var(--space-3); border-radius: 8px; cursor: pointer; font-size: var(--font-size-3); transition: transform 0.12s ease, background 0.12s ease; }
+.btn-primary:hover { background: var(--color-primary-dark); transform: translateY(-2px); }
+.btn-primary:active { transform: translateY(0); }
+.btn-primary:disabled { background: var(--color-gray); cursor: not-allowed; }
+
+.btn-secondary { background: var(--color-secondary); color: var(--color-dark); border: none; padding: var(--space-2) var(--space-3); border-radius: 8px; cursor: pointer; }
+.btn-secondary:hover { background: var(--color-secondary-dark); }
+
+/* Alerts / toasts (non-blocking) */
+.alert { display: none; padding: var(--space-2); border-radius: 8px; max-width: 520px; margin: var(--space-3) auto; text-align: center; color: var(--color-white); }
+.alert.success { background: var(--color-success); display: none; }
+.alert.error { background: var(--color-error); display: none; }
+
+/* Badges & tags */
+.badge { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--color-accent); color: var(--color-white); font-size: var(--font-size-2); }
+
+/* small helpers */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

@@ -1,0 +1,53 @@
+/* Layout principal com Grid e algumas áreas */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--color-dark);
+  background: var(--color-light);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+header, main, footer { width: 100%; }
+
+.navbar {
+  background: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo { font-size: var(--font-size-4); font-weight: 700; }
+
+.menu { display: flex; list-style: none; gap: var(--space-3); margin: 0; padding: 0; }
+.menu a { color: var(--color-white); text-decoration: none; font-size: var(--font-size-3); }
+
+.submenu { position: relative; }
+.submenu ul { display: none; position: absolute; top: 100%; left: 0; background: var(--color-primary-light); padding: var(--space-2); list-style: none; border-radius: 8px; margin: 0; }
+.submenu:hover ul, .submenu:focus-within ul { display: block; }
+
+.hamburger { display: none; font-size: 26px; }
+
+main { padding: var(--space-4); max-width: var(--container-max); margin: 0 auto; width: 100%; }
+
+.hero { text-align: center; margin-bottom: var(--space-5); }
+.hero h1 { font-size: var(--font-size-5); margin: 0 0 var(--space-2) 0; }
+
+/* Cards area using flex for internal components */
+.cards { display: flex; gap: var(--space-3); flex-wrap: wrap; justify-content: center; }
+.card { background: var(--color-white); border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: var(--space-3); width: 320px; text-align: center; }
+.card-image.placeholder { height: 180px; border-radius: 8px; background: linear-gradient(135deg, var(--color-primary-light), var(--color-secondary)); color: rgba(255,255,255,0.95); display: flex; align-items: center; justify-content: center; font-weight: 700; }
+
+.formulario { margin-top: var(--space-5); }
+form { display: grid; gap: var(--space-2); max-width: 520px; margin: 0 auto; }
+input, textarea { padding: var(--space-2); border: 1px solid var(--color-gray); border-radius: 8px; font-size: var(--font-size-3); width: 100%; }
+input:focus, textarea:focus { outline: none; border-color: var(--color-primary); box-shadow: 0 0 0 3px rgba(30,136,229,0.08); }
+
+footer { background: var(--color-primary-dark); color: var(--color-white); text-align: center; padding: var(--space-3); margin-top: var(--space-4); }
